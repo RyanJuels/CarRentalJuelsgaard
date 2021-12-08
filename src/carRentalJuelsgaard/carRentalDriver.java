@@ -1,5 +1,22 @@
 package carRentalJuelsgaard;
-
+/***************************************************************
+* Name : Driver class for the Car Rental Program
+* Author: Ryan Juelsgaard
+* Created 11/27/2021
+* Course: CIS 152 - Data Structure
+* Version: 1.0
+* OS: Windows 10
+* IDE: eclipse EE
+* Copyright : This is my own original work 
+* based on specifications issued by our instructor
+* Description : The driver for the Car Rental Program that
+* creates multiple cars to show off to the user and runs
+* the main menu of the program.
+* Academic Honesty: I attest that this is my original work.
+* I have not used unauthorized source code, either modified or
+* unmodified. I have not given other fellow student(s) access
+* to my program.
+***************************************************************/
 import java.util.LinkedList;
 
 public class carRentalDriver {
@@ -17,7 +34,7 @@ public class carRentalDriver {
 		cars.add(car2);
 		cars.add(car3);
 		cars.add(car4);
-		car5.addToWait("Tiffany");
+		car5.addToWait("Justin");
 		car5.addToWait("Celina");
 		cars.add(car5);
 		car7.addToWait("CJ");

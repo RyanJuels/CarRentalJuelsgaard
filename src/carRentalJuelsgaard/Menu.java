@@ -2,9 +2,26 @@ package carRentalJuelsgaard;
 
 import java.util.InputMismatchException;
 import java.util.LinkedList;
-import java.util.ListIterator;
 import java.util.Scanner;
 
+/***************************************************************
+* Name : Main class for the Car Rental Program
+* Author: Ryan Juelsgaard
+* Created 11/27/2021
+* Course: CIS 152 - Data Structure
+* Version: 1.0
+* OS: Windows 10
+* IDE: eclipse EE
+* Copyright : This is my own original work 
+* based on specifications issued by our instructor
+* Description : The Main class in the car rental program that
+* allows a person to rent look at the cars the establishment
+* has and allows a user to rent one if the choose to.
+* Academic Honesty: I attest that this is my original work.
+* I have not used unauthorized source code, either modified or
+* unmodified. I have not given other fellow student(s) access
+* to my program.
+***************************************************************/
 public class Menu {
 	private LinkedList<Car> cars;
 
@@ -68,7 +85,7 @@ public class Menu {
 		System.out.println(
 				"\nPlease Choose a Car From the List to Veiw More About Them or Enter 0 to Return to the Main Menu: ");
 		listInput = getInput(cars.size());
-		
+
 		// asks user to decide if they want to rent the car they decided to look at.
 		while (listInput != 0) {
 			System.out.println(cars.get(listInput - 1).deatiledCar());

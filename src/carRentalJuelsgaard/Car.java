@@ -2,9 +2,25 @@ package carRentalJuelsgaard;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+/***************************************************************
+* Name : Car class for the Car Rental Program
+* Author: Ryan Juelsgaard
+* Created 11/27/2021
+* Course: CIS 152 - Data Structure
+* Version: 1.0
+* OS: Windows 10
+* IDE: eclipse EE
+* Copyright : This is my own original work 
+* based on specifications issued by our instructor
+* Description : The Car class to be used in the Car Rental Program
+* Academic Honesty: I attest that this is my original work.
+* I have not used unauthorized source code, either modified or
+* unmodified. I have not given other fellow student(s) access
+* to my program.
+***************************************************************/
 public class Car {
 
+	// Initializing all variables to be used
 	private Queue<String> waitList = new LinkedList<String>();
 	private String model;
 	private String make;
@@ -13,6 +29,7 @@ public class Car {
 	private int mpg;
 	private int year;
 
+	// Constructor for when there is not prior renter
 	public Car(String model, String make, int numSeats, int mpg, int year) {
 		this.model = model;
 		this.make = make;
@@ -23,6 +40,7 @@ public class Car {
 
 	}
 
+	// Constructor for if there is a current renter
 	public Car(String make, String model, int numSeats, int mpg, int year, String renter) {
 		this.model = model;
 		this.make = make;
@@ -32,14 +50,18 @@ public class Car {
 		this.renter = renter;
 	}
 
+	// Adding to the waitList if there is already a renter or making the name the
+	// renter if it is currently available
 	public void addToWait(String name) {
 		waitList.add(name);
 	}
 
+	// Checking to see if the Car is Available to rent currently
 	public boolean isAvalible() {
 		return renter == null;
 	}
 
+	// A Detailed vie of the car showing all variables
 	public String deatiledCar() {
 		if (!isAvalible()) {
 			return ("Make --------------- " + make + "\nModel -------------- " + model + "\nYear --------------- "
@@ -51,9 +73,12 @@ public class Car {
 				+ isAvalible());
 	}
 
+	// A less detailed view of the car
 	public String toString() {
 		return ("Make: " + make + "\nModel: " + model + "\nNumber of Seats: " + numSeats);
 	}
+
+	// Getters and Setters for all variables past here
 
 	/**
 	 * @return the model
