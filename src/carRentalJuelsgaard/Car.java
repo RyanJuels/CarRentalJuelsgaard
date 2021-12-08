@@ -50,8 +50,7 @@ public class Car {
 		this.renter = renter;
 	}
 
-	// Adding to the waitList if there is already a renter or making the name the
-	// renter if it is currently available
+	// Adding the name parameter to the waitList
 	public void addToWait(String name) {
 		waitList.add(name);
 	}
@@ -61,7 +60,7 @@ public class Car {
 		return renter == null;
 	}
 
-	// A Detailed vie of the car showing all variables
+	// A Detailed view of the car showing all variables
 	public String deatiledCar() {
 		if (!isAvalible()) {
 			return ("Make --------------- " + make + "\nModel -------------- " + model + "\nYear --------------- "

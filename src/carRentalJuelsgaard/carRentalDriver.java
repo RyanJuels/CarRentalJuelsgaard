@@ -34,10 +34,14 @@ public class carRentalDriver {
 		cars.add(car2);
 		cars.add(car3);
 		cars.add(car4);
+		
 		car5.addToWait("Justin");
 		car5.addToWait("Celina");
+		
 		cars.add(car5);
+		
 		car7.addToWait("CJ");
+		
 		cars.add(car7);
 		cars.add(car6);
 		cars.add(car8);
