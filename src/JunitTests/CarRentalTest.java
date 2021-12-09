@@ -86,6 +86,36 @@ class CarRentalTest {
 		assertEquals("Reid", car1.getWaitList().peek());
 	}
 	
+	//Testing the nextRenter() function of the Car class to decide who the next renter is
+	@Test
+	void testNextRenter1() {
+		Menu testMenu = new Menu(cars);
+		testMenu.rent("Ryan", car1);
+		car1.nextRenter();
+		assertEquals("Ryan", car1.getRenter());
+	}
+	
+	//Testing the nextRenter() function of the Car class to decide who the next renter is
+	@Test
+	void testNextRenter2() {
+		Menu testMenu = new Menu(cars);
+		testMenu.rent("Ryan", car1);
+		car1.nextRenter();
+		car1.nextRenter();
+		assertEquals(null, car1.getRenter());
+	}
+	
+	//Testing the nextRenter() function of the Car class to see if it makes the car available if there is nobody in the waitList
+	@Test
+	void testNextRenter3() {
+		Menu testMenu = new Menu(cars);
+		testMenu.rent("Ryan", car1);
+		car1.nextRenter();
+		car1.nextRenter();
+		assertEquals(true, car1.isAvailable());
+	}
+	
+	
 	//Testing the Insertion sort in the menu class that sorts by the number of seats
 	@Test
 	void testInsertionSort() {

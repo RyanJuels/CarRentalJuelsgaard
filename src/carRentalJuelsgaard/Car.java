@@ -56,20 +56,30 @@ public class Car {
 	}
 
 	// Checking to see if the Car is Available to rent currently
-	public boolean isAvalible() {
+	public boolean isAvailable() {
 		return renter == null;
 	}
 
 	// A Detailed view of the car showing all variables
 	public String deatiledCar() {
-		if (!isAvalible()) {
+		if (!isAvailable()) {
 			return ("Make --------------- " + make + "\nModel -------------- " + model + "\nYear --------------- "
 					+ year + "\nMPG ---------------- " + mpg + "\nNumber of Seats ---- " + numSeats
 					+ "\nWaitList ----------- " + waitList.size());
 		}
 		return ("Make --------------- " + make + "\nModel -------------- " + model + "\nYear --------------- " + year
 				+ "\nMPG ---------------- " + mpg + "\nNumber of Seats ---- " + numSeats + "\nAvalible ----------- "
-				+ isAvalible());
+				+ isAvailable());
+	}
+	
+	// Decides who the next renter of the car is based on the waitList Queue, or null if there is nobody waiting for the car
+	public void nextRenter() {
+		if(!waitList.isEmpty()) {
+			renter = waitList.remove();
+		}
+		else {
+			renter = null;
+		}
 	}
 
 	// A less detailed view of the car

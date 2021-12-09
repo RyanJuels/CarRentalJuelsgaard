@@ -74,7 +74,7 @@ public class Menu {
 		// whether they are available.
 		for (int i = 0; i < cars.size(); i++) {
 			System.out.println("\n" + (i + 1) + ". " + cars.get(i).toString());
-			if (cars.get(i).isAvalible()) {
+			if (cars.get(i).isAvailable()) {
 				System.out.println("This car is avalible right away.");
 			} else {
 				System.out.println("This car is not avalible right away.");
@@ -110,7 +110,7 @@ public class Menu {
 
 	// Add's the renters name to the car, or adds the name to the wait list
 	public void rent(String name, Car car) {
-		if (car.isAvalible()) {
+		if (car.isAvailable()) {
 			car.setRenter(name);
 			System.out.println(
 					"Thank you for renting with us!\nPlease come to the office and we will have the paperwork ready for your rental.\n");
